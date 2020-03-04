@@ -9,3 +9,5 @@
 *.synctex.gz
 
 build
+
+config.tex

@@ -5,4 +5,4 @@ Latex Template for Assignments at AKAD University
 
 ## Debian / Ubuntu
 
-      sudo apt install -y texlive-fonts-recommended texlive-extra-utils texlive-lang-english texlive-lang-german texlive-luatex
+      sudo apt install -y texlive-fonts-recommended texlive-extra-utils texlive-lang-english texlive-lang-german texlive-luatex texlive-latex-extra texlive-bibtex-extra
