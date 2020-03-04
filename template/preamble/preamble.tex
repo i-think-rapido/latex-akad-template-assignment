@@ -74,7 +74,8 @@
   belowskip= 0pt 
 }
 
-\input{config}
+\input{config-default}
+\IfFileExists{config}{\input{config}}
 \input{\TemplatePath/config}
 
 \input{\TemplatePath/preamble/styles}
