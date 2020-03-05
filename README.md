@@ -53,4 +53,4 @@ It will tremendously ease your life while writing content and modifing the templ
 
 ## Debian / Ubuntu
 
-      sudo apt install -y texlive-fonts-recommended texlive-extra-utils texlive-lang-english texlive-lang-german texlive-luatex texlive-latex-extra texlive-bibtex-extra
+      sudo apt install -y texlive-fonts-recommended texlive-extra-utils texlive-lang-english texlive-lang-german texlive-luatex texlive-latex-extra texlive-bibtex-extra biber

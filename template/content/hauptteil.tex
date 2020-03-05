@@ -1,0 +1,52 @@
+\chapter{Hauptteil}
+
+\section{Tabelle}
+
+\begin{center}
+\tablehead{ \textbf{Head1} & \textbf{Head2} & \textbf{Head3}
+\\ }
+\bottomcaption[Beschreibung]{Beschreibung. Quelle: Berger, Vorlesung, 2012, München }
+\begin{supertabular}{c|c|c}
+\hline
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+\end{supertabular}
+\end{center}
+
+\section{Bilder}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{\TemplatePath/resources/akad_logo.png}
+\caption[Akad]{Akad. Quelle: www.akad.de}
+\end{center}
+\end{figure}
+
+%%Einkommentieren fuer Syntax Highlighting. In vorlage.tex muessen auch 2 Zeilen einkommentiert werden
+%\subsection{Syntax Highlighting}
+%\begin{figure}[h]
+%\begin{minted}[linenos=true,bgcolor=bg]{php}
+%<?php 
+%$title="Lorem";
+%$desc = "Lorem Ipsum";
+%include($_SERVER['DOCUMENT_ROOT'].'/header.php'); 
+%?>
+%\end{minted}
+%\caption{Quellcode: Aufruf von header.php (PHP)}
+%\label{abb:header}
+%\end{figure}
+
+\section{Formeln}
+
+\section{Quellcode}
+\begin{figure}
+\begin{lstlisting}[language=bash]
+echo "Hello World"
+\end{lstlisting}
+\caption{Bash Hello World}
+\end{figure}
+

@@ -1,7 +1,6 @@
 
 %
 %% Document Class (Koma Script) -----------------------------------------
-%% Doc: scrguien.pdf
 \documentclass[%
    %draft=true,     % draft mode (no images, layout errors shown)
    draft=false,     % final mode 
@@ -15,12 +14,13 @@
    version=last, %
 %%% --- Global Package Options ---
    ngerman, % language (passed to babel and other packages)
+   english,
    parskip,
    numbers=noenddot,
    bibliography=totoc
-]{scrreprt} % Classes: scrartcl, scrreprt, scrbook\usepackage[ngerman]{babel}
+]{scrreprt}
 
-\usepackage[nottoc]{tocbibind} % Anzeigen des Literaturverzeichnisses im TOC
+\usepackage[nottoc]{tocbibind} % Anzeigen des Literaturverzeichnisses im TOC https://ctan.kako-dev.de/macros/latex/contrib/tocbibind/tocbibind.pdf
 \usepackage{epsfig}
 %\usepackage{times}
 \usepackage{babel}
@@ -35,17 +35,14 @@
 \usepackage{courier}
 \usepackage{setspace}
 \usepackage{textcomp}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{float} % Notwendig fuer figure[h]
-\usepackage[german=quotes]{csquotes}
-\usepackage[style=alphabetic]{biblatex} % alternative: iso-authoryear
+\usepackage{fontspec}
+\usepackage[german=quotes]{csquotes} % http://ctan.ebinger.cc/tex-archive/macros/latex/contrib/csquotes/csquotes.pdf
+\usepackage[backend=biber,style=alphabetic]{biblatex} % alternative: iso-authoryear
 \usepackage{pdfpages}
-% Fuer Schriftart Arial
-%\usepackage[scaled]{uarial}
 
+\IfFileExists{content/literatur.bib}{\addbibresource{content/literatur.bib}}{\addbibresource{\TemplatePath/content/literatur.bib}}
 
-\lstset{ %
+\lstset{ % Source Code Printer
   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
   basicstyle=\footnotesize,        % the size of the fonts that are used for the code
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
@@ -79,28 +76,6 @@
 
 \input{\TemplatePath/preamble/styles}
 
-\usepackage[nottoc]{tocbibind} % Anzeigen des Literaturverzeichnisses im TOC
-\usepackage{epsfig}
-%\usepackage{times}
-\usepackage{babel}
-\usepackage{supertabular}
-\usepackage{wrapfig}
-\usepackage{multirow}
-\usepackage[onehalfspacing]{setspace}
-\usepackage{listings}
-\usepackage{mathptmx}
-\usepackage{geometry}
-\usepackage{helvet}
-\usepackage{courier}
-\usepackage{setspace}
-\usepackage{textcomp}
-%\usepackage[T1]{fontenc}
-\usepackage{fontspec}
-%\usepackage[utf8]{inputenc}
-\usepackage{float} % Notwendig fuer figure[h]
-\usepackage[german=quotes]{csquotes}
-\usepackage[style=alphabetic]{biblatex} % alternative: iso-authoryear
-\usepackage{pdfpages}
 % Fuer Schriftart Arial
 %\usepackage[scaled]{uarial}
 
@@ -161,7 +136,7 @@
 	linkcolor=black,
 	urlcolor=black,
 	citecolor=black
-]{hyperref}
+]{hyperref} % http://mirrors.ctan.org/macros/latex/contrib/hyperref/doc/manual.html
 
 %%% Abkürzungsverzeichnis
 %\usepackage[
@@ -185,12 +160,19 @@
 %	style=altlist,
 	nopostdot, % löscht den schlusspunkt nach jeder description
 ]{glossaries}
-\glossarystyle{super}
 \makeglossaries % Glossar generieren
-
-\newfloat{Formel}{H}{for}
 
 \renewcommand\UrlFont{\color{black}\rmfamily\itshape}
 
 \renewcommand{\familydefault}{\rmdefault}
 \newcommand{\bflabel}[1]{\normalfont{\normalsize{#1}}\hfill}
+
+%% Definition for Codeschnipsel im Fließtext
+\newcommand{\code}{\texttt}
+
+%% Todos mithilfe eines Rahmens hervorheben
+\newcommand{\todo}[1]{\fbox{\parbox{\textwidth}{\textbf{To do:} #1}}}
+
+\newcommand{\loadcontent}[1]{\IfFileExists{#1}{\input{#1}}{\input{\TemplatePath/#1}}}
+
+\input{\TemplatePath/preamble/glossary}
