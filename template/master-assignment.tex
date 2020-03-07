@@ -1,0 +1,17 @@
+
+\newcommand*{\TemplatePath}{template}%
+
+\input{\TemplatePath/preamble/preamble}
+
+\begin{document}
+
+\input{\TemplatePath/preamble/title-page}
+
+\loadcontent{content/einleitung}
+\loadcontent{content/grundlagen}
+\loadcontent{content/hauptteil}
+\loadcontent{content/schluss}
+
+\printglossary
+
+\end{document}
