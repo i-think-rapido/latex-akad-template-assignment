@@ -37,7 +37,7 @@
 \usepackage{textcomp}
 \usepackage{fontspec}
 \usepackage[german=quotes]{csquotes} % http://ctan.ebinger.cc/tex-archive/macros/latex/contrib/csquotes/csquotes.pdf
-\usepackage[backend=biber,style=alphabetic]{biblatex} % alternative: iso-authoryear
+\usepackage[backend=biber,style=authoryear]{biblatex} % alternative: iso-authoryear
 \usepackage{pdfpages}
 
 \IfFileExists{content/literatur.bib}{\addbibresource{content/literatur.bib}}{\addbibresource{\TemplatePath/content/literatur.bib}}
@@ -130,7 +130,8 @@
 	pdftitle={\Title},
 	pdfsubject={\pdfsubject},
 	pdfauthor={\Name},
-	pdfkeywords={\pdfkeywords}
+  pdfkeywords={\pdfkeywords},
+  pdfencoding=auto,
 	hyperfootnotes=false,
 	colorlinks=true,
 	linkcolor=black,
