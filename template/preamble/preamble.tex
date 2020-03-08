@@ -2,27 +2,27 @@
 %
 %% Document Class (Koma Script) -----------------------------------------
 \documentclass[%
-   %draft=true,     % draft mode (no images, layout errors shown)
-   draft=false,     % final mode 
+  %draft=true,     % draft mode (no images, layout errors shown)
+  draft=false,     % final mode 
 %%% --- Paper Settings ---
-   paper=a4,
-   paper=portrait, % landscape
-   pagesize=auto, % driver
+  paper=a4,
+  paper=portrait, % landscape
+  pagesize=auto, % driver
 %%% --- Base Font Size ---
-   fontsize=12pt,%
+  fontsize=12pt,%
 %%% --- Koma Script Version ---
-   version=last, %
+  version=last, %
 %%% --- Global Package Options ---
-   ngerman, % language (passed to babel and other packages)
-   english,
-   parskip,
-   numbers=noenddot,
-   bibliography=totoc
+  english,
+  ngerman, % language (passed to babel and other packages)
+  parskip,
+  numbers=noenddot,
+  bibliography=totoc
 ]{scrreprt}
 
 \usepackage[nottoc]{tocbibind} % Anzeigen des Literaturverzeichnisses im TOC https://ctan.kako-dev.de/macros/latex/contrib/tocbibind/tocbibind.pdf
 \usepackage{epsfig}
-%\usepackage{times}
+\usepackage{datetime}
 \usepackage{babel}
 \usepackage{supertabular}
 \usepackage{wrapfig}
