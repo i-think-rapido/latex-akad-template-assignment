@@ -1,3 +1,9 @@
+
+type=assignment
+pdfcreation="lualatex --output-directory build template/master-$type.tex"
+
 find template -type d | while read line ; do mkdir -p build/$line ; done
-lualatex --output-directory build template/master-assignment.tex
-biber build/master-assignment
+$pdfcreation
+biber build/master-$type
+$pdfcreation
+$pdfcreation
