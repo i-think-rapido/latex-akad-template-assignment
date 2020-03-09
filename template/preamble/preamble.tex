@@ -37,10 +37,10 @@
 \usepackage{fontspec}
 \usepackage{indentfirst}
 \usepackage[german=quotes]{csquotes} % http://ctan.ebinger.cc/tex-archive/macros/latex/contrib/csquotes/csquotes.pdf
-\usepackage[backend=biber,style=authoryear]{biblatex} % alternative: iso-authoryear
+\usepackage[backend=biber,style=akad]{biblatex} % alternative: iso-authoryear
 \usepackage{pdfpages}
 
-\IfFileExists{content/literatur.bib}{\addbibresource{content/literatur.bib}}{\addbibresource{\TemplatePath/content/literatur.bib}}
+\IfFileExists{content/literatur.bib}{\addbibresource{content/literatur.bib}}{\addbibresource{content/literatur.bib}}
 
 \lstset{ % Source Code Printer
   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
@@ -67,10 +67,9 @@
   belowskip= 0pt 
 }
 
-\IfFileExists{config}{\input{config}}{\input{config-default}}
-\input{\TemplatePath/config}
+\input{config}
 
-\input{\TemplatePath/preamble/styles}
+\input{preamble/styles}
 
 % Fuer Schriftart Arial
 %\usepackage[scaled]{uarial}
@@ -83,6 +82,12 @@
 
 
 % PDF Einstellungen für Verlinkungen
+
+%PDF Keywords
+\newcommand*{\pdfkeywords}{akad, assignment, meta, information, pdf, hyperref, latex}
+
+%Literaturverzeichnis Titel
+\newcommand*{\prefbiblioname}{Literaturverzeichnis}
 
 \usepackage[
 	pdftitle={\Title},
@@ -132,6 +137,4 @@
 %% Todos mithilfe eines Rahmens hervorheben
 \newcommand{\todo}[1]{\fbox{\parbox{\textwidth}{\textbf{To do:} #1}}}
 
-\newcommand{\loadcontent}[1]{\IfFileExists{#1}{\input{#1}}{\input{\TemplatePath/#1}}}
-
-\input{\TemplatePath/preamble/glossary}
+\input{preamble/glossary}

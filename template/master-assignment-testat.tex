@@ -1,12 +1,10 @@
 
-\newcommand*{\TemplatePath}{template}%
-
-\input{\TemplatePath/preamble/preamble}
+\input{preamble/preamble}
 
 \begin{document}
 
 %% Title Page
-\input{\TemplatePath/preamble/title-page-assignment-testat}
+\input{preamble/title-page-assignment-testat}
 
 %% Table of Contents
 \thispagestyle{empty}
@@ -17,9 +15,9 @@
 %% Content
 \newpage
 \pagenumbering{arabic}
-\loadcontent{content/einleitung}
-\loadcontent{content/hauptteil}
-\loadcontent{content/zusammenfassung}
+\input{content/einleitung}
+\input{content/hauptteil}
+\input{content/zusammenfassung}
 
 %% Bibliography
 \newpage

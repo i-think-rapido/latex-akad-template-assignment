@@ -1,0 +1,20 @@
+\ProvidesFile{akad.cbx}
+
+\RequireCitationStyle{authoryear}
+
+
+\DeclareCiteCommand{\cite}
+  {\usebibmacro{prenote}}%
+  {\usebibmacro{citeindex}%
+   \usebibmacro{cite}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}\adddot}
+
+\DeclareCiteCommand*{\cite}
+  {\usebibmacro{prenote}}%
+  {\usebibmacro{citeindex}%
+   \usebibmacro{citeyear}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}\adddot}
+
+\endinput

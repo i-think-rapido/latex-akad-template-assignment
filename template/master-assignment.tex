@@ -1,16 +1,14 @@
 
-\newcommand*{\TemplatePath}{template}%
-
-\input{\TemplatePath/preamble/preamble}
+\input{preamble/preamble}
 
 \begin{document}
 
-\input{\TemplatePath/preamble/title-page-assignment}
+\input{preamble/title-page-assignment}
 
-\loadcontent{content/einleitung}
-\loadcontent{content/grundlagen}
-\loadcontent{content/hauptteil}
-\loadcontent{content/schluss}
+\input{content/einleitung}
+\input{content/grundlagen}
+\input{content/hauptteil}
+\input{content/schluss}
 
 \printglossary
 
