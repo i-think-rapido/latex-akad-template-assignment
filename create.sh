@@ -1,4 +1,6 @@
 
+killall gv 2>/dev/null 
+
 # remove build folder if existent
 [ -e build ] && rm -rf build 2>/dev/null
 
@@ -18,3 +20,5 @@ $pdfcreation && \
 biber $document && \
 $pdfcreation && \
 $pdfcreation
+
+[ ! -z "`which gv`" ] && gv --page="$1" $document.pdf &

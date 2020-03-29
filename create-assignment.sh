@@ -1,4 +1,4 @@
 
 type=assignment
 
-. ./create.sh
+. ./create.sh "$1"

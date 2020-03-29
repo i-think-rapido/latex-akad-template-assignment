@@ -1,4 +1,4 @@
 
 type=assignment-testat
 
-. ./create.sh
+. ./create.sh "$1"
