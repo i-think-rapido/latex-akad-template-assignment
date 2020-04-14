@@ -23,6 +23,7 @@
 \usepackage{epsfig}
 \usepackage{datetime}
 \usepackage{babel}
+\usepackage{caption2}
 \usepackage{supertabular}
 \usepackage{wrapfig}
 \usepackage{multirow}
@@ -138,3 +139,9 @@
 \newcommand{\todo}[1]{\fbox{\parbox{\textwidth}{\textbf{To do:} #1}}}
 
 \input{preamble/glossary}
+
+%% figure and table names
+\renewcaptionname{ngerman}{\figurename}{Abb.}
+\renewcaptionname{english}{\figurename}{Fig.}
+\renewcaptionname{ngerman,english}{\tablename}{Tab.}
+
