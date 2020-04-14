@@ -23,8 +23,14 @@
 %% Bibliography
 \newpage
 \pagenumbering{roman}
-\printbibliography[title=Literaturverzeichnis]
-\printbibliography[type=book,title=Literaturverzeichnis]
-\printbibliography[nottype=book,title=Online Quellen]
+
+\defbibfilter{literatur}{
+    \type{book} or \type{article}
+}
+\defbibfilter{online}{
+    \type{online} or \type{report}
+}
+\printbibliography[filter=literatur,title=Literaturverzeichnis]
+\printbibliography[filter=online,title=Online Quellen]
 
 \end{document}
