@@ -18,7 +18,9 @@ pdfcreation="lualatex $document"
 cd build && \
 $pdfcreation && \
 biber $document && \
+makeindex $document
 $pdfcreation && \
-$pdfcreation
+$pdfcreation && \
+echo
 
 [ ! -z "`which gv`" ] && gv --page="$1" $document.pdf &
