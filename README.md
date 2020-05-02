@@ -1,6 +1,8 @@
 # latex-akad-template-assignment
 Latex Template for Assignments at AKAD University
 
+*WARNING: this is work in progress*
+
 ## Create Your Own Document
 
 - Fork repo
