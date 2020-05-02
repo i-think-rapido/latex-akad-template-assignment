@@ -1,9 +1,10 @@
 # latex-akad-template-assignment
 Latex Template for Assignments at AKAD University
 
+**WARNING: DON'T PUSH YOUR ASSIGNMENT CONTENT TO YOUR PUBLIC GIT REPO**
 *WARNING: this is work in progress*
 
-## Create Your Own Document
+## Create Your Own Document Structure
 
 - Fork repo
 - Checkout your fork
@@ -12,6 +13,9 @@ Latex Template for Assignments at AKAD University
 
 - to customize title page, keep ```config-default.tex``` unchanged. Instead copy it to ```config.tex``` and only make changes to this new file.
 - you also need to explicitely force git to keep track of ```config.tex``` by typing ```git add -f config.tex```
+
+- ```cp template/content/* content```
+- start working on your assignment in the content folder and keep other folders untouched when you don't know what you're doing
 
 ### Following git repo structure of your fork is recommended:
 
